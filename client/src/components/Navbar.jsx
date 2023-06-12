@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Navbar,
-  MobileNav,
+  Collapse,
   Typography,
   Button,
   IconButton,
@@ -29,6 +29,16 @@ export default function Nav() {
       >
         <Link to="/" className="flex items-center">
           Home
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <Link to="/createuser" className="flex items-center">
+          Sigh Up
         </Link>
       </Typography>
     </ul>
@@ -93,12 +103,12 @@ export default function Nav() {
             </IconButton>
           </div>
         </div>
-        <MobileNav open={openNav}>
+        <Collapse open={openNav}>
           {navList}
           <Button variant="gradient" size="sm" fullWidth className="mb-2">
             <span><Link to="/login">Login</Link></span>
           </Button>
-        </MobileNav>
+        </Collapse>
       </Navbar>
     </>
   );
