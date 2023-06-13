@@ -61,16 +61,6 @@ export default function Home() {
             <div className="flex flex-col">
               <div className="text-2xl my-10">{data.CategoryName}</div>
               
-              
-              
-              {/* {foodItems !== [] ? foodItems.filter(
-//                     (items) => (items.CategoryName === data.CategoryName) && (items.name.toLowerCase().includes(search.toLowerCase())))
-//                 .map((filterItems) => (
-              
-               */}
-              
-              
-              
               {foodItems.length > 0 ? (
                 foodItems
                   .filter(
