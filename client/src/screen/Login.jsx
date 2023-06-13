@@ -37,7 +37,9 @@ export default function Example() {
       alert("Failed to create user")
     }
     if (json.success) {
-      navigate("/")
+      localStorage.setItem("authToken", json.authToken);
+      console.log(localStorage.getItem("authToken"));
+      navigate("/");
     }
   }
 
