@@ -60,7 +60,7 @@ export default function Home() {
           <div className="flex" key={data._id}>
             <div className="flex flex-col">
               <div className="text-2xl my-10">{data.CategoryName}</div>
-              
+
               {foodItems.length > 0 ? (
                 foodItems
                   .filter(
@@ -72,8 +72,9 @@ export default function Home() {
                     <div key={filterItems._id}>
                       <Card
                         key={filterItems._id}
-                        foodName={filterItems.name}
-                        imgSrc={filterItems.img}
+                        foodItem={filterItems}
+                        // foodName={filterItems.name}
+                        // imgSrc={filterItems.img}
                         options={filterItems.options[0]}
                       />
                     </div>

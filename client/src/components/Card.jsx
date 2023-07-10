@@ -7,18 +7,25 @@ import {
     Button,
 } from "@material-tailwind/react";
 
+import { useDispatchCart, useCart } from "./ContextReducer";
+import { useState } from "react";
 export default function Example(props) {
     let options = props.options;
     let priceOptions = Object.keys(options);
+    const handleAddToCart = () => {
+
+    }
+    const [qty, setQty] = useState(1);
+    const [size, setSize] = useState("")
 
     return (
         <Card className="mt-6 w-96">
             <CardHeader color="blue-gray" className="relative h-56">
-                <img src={props.imgSrc} alt="img-blur-shadow" />
+                <img src={props.foodItem.img} alt="img-blur-shadow" />
             </CardHeader>
             <CardBody>
                 <Typography variant="h5" color="blue-gray" className="mb-2">
-                    {props.foodName}
+                    {props.foodItem.name}
                 </Typography>
                 <Typography>The place is close</Typography>
             </CardBody>
@@ -39,7 +46,7 @@ export default function Example(props) {
                 </select>
                 <h1 className="text-black text-lg m-2">Total Price</h1>
             </CardFooter>
-            <Button className="w-fit mx-auto mb-[100px] mt-[20px]">Add To Card</Button>
+            <Button className="w-fit mx-auto mb-[100px] mt-[20px]" onClick={handleAddToCart}>Add To Card</Button>
         </Card>
     );
 }

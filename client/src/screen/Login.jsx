@@ -52,7 +52,7 @@ export default function Example() {
     <div className="flex justify-center align-middle w-screen h-screen">
       <Card color="transparent" shadow={false}>
         <Typography variant="h4" color="blue-gray">
-          Sign Up
+         Login
         </Typography>
         <Typography color="gray" className="mt-1 font-normal">
           Enter your details to register.
